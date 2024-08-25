@@ -22,11 +22,15 @@ pull from repo
 
 or download ntfy.py and replace in custom_nodes directory.
 
-# Usage
+# Nodes
+
+## ntfy
+
+### Usage
 
 Place inbetween VAE decode and Save/Preview Image
 
-## Params
+### Params
 
 - URL
   - The url to post/put request to
@@ -38,3 +42,13 @@ Place inbetween VAE decode and Save/Preview Image
 - Print to screen
   - Log data out to server
   - "Sending notification to \<URL\>"
+
+## Save Image and ntfy
+
+### Usage
+
+Replaces standard Save Image node
+
+### Params
+
+Combines Save Image and ntfy nodes
