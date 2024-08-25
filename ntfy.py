@@ -18,7 +18,7 @@ class Ntfy:
                 "url": (
                     "STRING",
                     {
-                        "multiline": False,  # True if you want the field to look like the one on the ClipTextEncode node
+                        "multiline": False,
                         "default": "https://ntfy.sh/comfyui_share",
                         "lazy": True,
                     },
@@ -26,7 +26,7 @@ class Ntfy:
                 "msg": (
                     "STRING",
                     {
-                        "multiline": False,  # True if you want the field to look like the one on the ClipTextEncode node
+                        "multiline": False,
                         "default": "Image generation finished!",
                         "lazy": True,
                     },
@@ -64,9 +64,5 @@ class Ntfy:
         return (images,)
 
 
-# A dictionary that contains all nodes you want to export with their names
-# NOTE: names should be globally unique
 NODE_CLASS_MAPPINGS = {"Ntfy": Ntfy}
-
-# A dictionary that contains the friendly/humanly readable titles for the nodes
 NODE_DISPLAY_NAME_MAPPINGS = {"Ntfy": "ntfy"}
