@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-ntfy"
+description = "NODES:Save Image and ntfy"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/boredofnames/ComfyUI-ntfy"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-ntfy"
+Icon = ""
