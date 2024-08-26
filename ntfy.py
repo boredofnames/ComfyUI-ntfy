@@ -82,6 +82,7 @@ class SaveImageAndNtfy(SaveImage):
                         "tooltip": "The prefix for the file to save. This may include formatting information such as %date:yyyy-MM-dd% or %Empty Latent Image.width% to include values from nodes.",
                     },
                 ),
+                "ntfy": (["enable", "disable"],),
                 "print_to_screen": (["enable", "disable"],),
                 "send_image": (["enable", "disable"],),
                 "url": (
@@ -111,6 +112,7 @@ class SaveImageAndNtfy(SaveImage):
         self,
         images,
         filename_prefix,
+        ntfy,
         print_to_screen,
         send_image,
         url,
@@ -126,6 +128,7 @@ class SaveImageAndNtfy(SaveImage):
     def save_and_ntfy(
         self,
         images,
+        ntfy,
         print_to_screen,
         send_image,
         url,
@@ -134,7 +137,8 @@ class SaveImageAndNtfy(SaveImage):
         prompt=None,
         extra_pnginfo=None,
     ):
-        send_ntfy(images, print_to_screen, send_image, url, msg)
+        if ntfy == "enable":
+            send_ntfy(images, print_to_screen, send_image, url, msg)
         return super().save_images(
             images=images,
             filename_prefix=filename_prefix,

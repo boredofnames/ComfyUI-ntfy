@@ -52,3 +52,7 @@ Replaces standard Save Image node
 ### Params
 
 Combines Save Image and ntfy nodes
+
+- ntfy
+  - If enabled, send notification
+  - If disabled, don't send
