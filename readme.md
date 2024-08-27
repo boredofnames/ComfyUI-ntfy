@@ -1,3 +1,9 @@
+# About
+
+[ntfy](https://ntfy.sh/) is a simple HTTP-based pub-sub notification service. This repo adds 2 nodes to make ntfy notifications simple in ComfyUI. Supports sending a simple text based notification, or the generated image as an attachment to a topic.
+
+Please note, by default it's set to send the image to the topic "comfyui_share". Anyone subscribed to this topic will see the generated image if they choose to download it. Therefore, be sure to change the input URL to a preferred subscribed topic if you don't want this! This may change in the future, but I think seeing a working example is the best way to learn.
+
 # Install
 
 cd into custom_nodes directory
@@ -24,35 +30,4 @@ or download ntfy.py and replace in custom_nodes directory.
 
 # Nodes
 
-## ntfy
-
-### Usage
-
-Place inbetween VAE decode and Save/Preview Image
-
-### Params
-
-- URL
-  - The url to post/put request to
-- MSG
-  - The message used when send image is disabled
-- Send Image
-  - If enabled, send the image as attachment via PUT
-  - If disabled, send MSG instead
-- Print to screen
-  - Log data out to server
-  - "Sending notification to \<URL\>"
-
-## Save Image and ntfy
-
-### Usage
-
-Replaces standard Save Image node
-
-### Params
-
-Combines Save Image and ntfy nodes
-
-- ntfy
-  - If enabled, send notification
-  - If disabled, don't send
+See [Wiki](https://github.com/boredofnames/ComfyUI-ntfy/wiki)
